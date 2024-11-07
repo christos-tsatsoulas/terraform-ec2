@@ -4,7 +4,7 @@ terraform {
   #backend "s3" {
   #  bucket         = "devops-directive-tf-state"
   #  key            = "06-organization-and-modules/web-app/terraform.tfstate"
-  #  region         = "us-east-1"
+  #  region         = "eu-west-1"
   #  dynamodb_table = "terraform-state-locking"
   #  encrypt        = true
   #}
@@ -44,7 +44,7 @@ module "web_app_1" {
   instance_type    = "t2.micro"
   create_dns_zone  = true
   db_name          = "webapp1db"
-  db_user          = "foo"
+  db_user          = "dbuser1"
   db_pass          = var.db_pass_1
 }
 
@@ -59,6 +59,6 @@ module "web_app_2" {
   instance_type    = "t2.micro"
   create_dns_zone  = true
   db_name          = "webapp2db"
-  db_user          = "bar"
+  db_user          = "dbuser2"
   db_pass          = var.db_pass_2
 }
