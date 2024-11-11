@@ -48,17 +48,17 @@ module "web_app_1" {
   db_pass          = var.db_pass_1
 }
 
-module "web_app_2" {
-  source = "./app-modules"
+# module "web_app_2" {
+#   source = "./app-modules"
 
-  # Input Variables
-  bucket_prefix    = "web-app-2-data"
-  domain           = "orion-arm2.io"
-  app_name         = "web-app-2"
-  environment_name = "production"
-  instance_type    = "t2.micro"
-  create_dns_zone  = true
-  db_name          = "webapp2db"
-  db_user          = "dbuser2"
-  db_pass          = var.db_pass_2
-}
+#   # Input Variables
+#   bucket_prefix    = "web-app-2-data"
+#   domain           = "orion-arm2.io"
+#   app_name         = "web-app-2"
+#   environment_name = "production"
+#   instance_type    = "t2.micro"
+#   create_dns_zone  = true
+#   db_name          = "webapp2db"
+#   db_user          = "dbuser2"
+#   db_pass          = var.db_pass_2
+# }
